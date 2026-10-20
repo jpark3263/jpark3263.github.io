@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real-Time Front-End Adaptation for Energy-Efficient mmWave Radar Sensor | Jinhyeok Park</title>
+  <meta name="description" content="A lightweight feedback loop that reconfigures an AWR1843 radar front-end frame by frame with a pre-trained ML model, improving energy efficiency 2.7× within real-time latency limits.">
+  <meta property="og:title" content="Real-Time Front-End Adaptation for Energy-Efficient mmWave Radar Sensor">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/pub/sensors2025-frontend-adaptation.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../faviconfiles/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../faviconfiles/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../faviconfiles/favicon-16x16.png">
+  <link rel="manifest" href="../faviconfiles/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="publication-page">
+  <a class="back-link" href="../index.html#publications"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  <h1 class="publication-title">Real-Time Front-End Adaptation for Energy-Efficient mmWave Radar Sensor</h1>
+  <div class="publication-authors"><span class="author-me">Jinhyeok Park, </span><span class="author">Sudarshan Sharma, </span><span class="author">Wei-Chun Wang, </span><span class="author">Alex Saad-Falcon, </span><span class="author">Russ H. Huang, </span><span class="author">Alyosha Molnar, </span><span class="author">Justin Romberg, </span><span class="author"><a href="https://ece.gatech.edu/directory/saibal-mukhopadhyay" target="_blank" rel="noreferrer">Saibal Mukhopadhyay</a></span></div>
+  <div class="publication-venue">IEEE SENSORS, 2025</div>
+  <div class="publication-links"><a class="publication-link-btn" href="../publications/Real-Time%20Front-End%20Adaptation%20for%20Energy-Efficient%20mmWaver%20Radar%20Sensor.pdf" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>PDF</a></div>
+  <div class="publication-image"><img src="../assets/pub/sensors2025-frontend-adaptation.png" alt="Real-Time Front-End Adaptation for Energy-Efficient mmWave Radar Sensor"></div>
+  <div class="publication-section">
+    <h2>Abstract</h2>
+    <p>Radar sensor systems often suffer from suboptimal performance in dynamic environments due to static front-end configurations. While cognitive radar approaches have been proposed to address this issue through adaptive processing, they are often computationally intensive and unsuitable for real-time deployment. This work proposed a lightweight, feedback-driven adaptation framework on a frame-by-frame basis. Target information is extracted from the Range-Doppler map and detection accuracy is calculated by range errors between predicted and detected values. A pre-trained machine learning (ML) model adapts the front-end with low latency, while risk levels of errors are assessed using predefined policies. Proposed work was validated on an AWR1843 mmWave radar sensor, achieves a 2.7× improvement in energy efficiency while satisfying the latency constraints.</p>
+  </div>
+  <div class="publication-section" id="bibtex">
+    <h2>BibTeX</h2>
+    <div class="bibtex-wrapper" title="Click to copy"><span class="copy-note">Copied!</span><pre>@INPROCEEDINGS{11331014,
+  author={Park, Jinhyeok and Sharma, Sudarshan and Wang, Wei-Chun and Saad-Falcon, Alex and Huang, Russ H and Molnar, Alyosha and Romberg, Justin and Mukhopadhyay, Saibal},
+  booktitle={2025 IEEE SENSORS},
+  title={Real-Time Front-End Adaptation for Energy-Efficient mmWave Radar Sensor},
+  year={2025},
+  pages={1-4},
+  doi={10.1109/SENSORS59705.2025.11331014}}</pre></div>
+  </div>
+</div>
+<footer>ⓒ 2026 Jinhyeok Park</footer>
+<script>
+  document.querySelectorAll('.bibtex-wrapper').forEach(function (box) {
+    box.addEventListener('click', function () {
+      var text = box.querySelector('pre').innerText, note = box.querySelector('.copy-note');
+      var done = function () { note.classList.add('show'); setTimeout(function () { note.classList.remove('show'); }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {});
+    });
+  });
+</script>
+</body>
+</html>

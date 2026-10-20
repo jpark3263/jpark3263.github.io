@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Range-Adaptive FMCW Radar: Real-Time Adaptation of RF and Baseband for Robust and Energy-Efficient Sensing | Jinhyeok Park</title>
+  <meta name="description" content="Closed-loop, per-frame reconfiguration of the RF front-end and ADC on a commercial radar module, cutting total energy by 33–69% at a 21.76 ms median latency.">
+  <meta property="og:title" content="Range-Adaptive FMCW Radar: Real-Time Adaptation of RF and Baseband for Robust and Energy-Efficient Sensing">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/pub/ims2026-range-adaptive-fmcw.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../faviconfiles/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../faviconfiles/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../faviconfiles/favicon-16x16.png">
+  <link rel="manifest" href="../faviconfiles/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="publication-page">
+  <a class="back-link" href="../index.html#publications"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  <h1 class="publication-title">Range-Adaptive FMCW Radar: Real-Time Adaptation of RF and Baseband for Robust and Energy-Efficient Sensing</h1>
+  <div class="publication-authors"><span class="author-me">Jinhyeok Park, </span><span class="author">Mir Sayeed Mohammad, </span><span class="author">Wei-Chun Wang, </span><span class="author"><a href="https://ece.gatech.edu/directory/saibal-mukhopadhyay" target="_blank" rel="noreferrer">Saibal Mukhopadhyay</a></span></div>
+  <div class="publication-venue">IEEE MTT-S Radio Frequency Systems and Applications Symposium (IMS RFSA), 2026, pp. 219–222</div>
+  <div class="publication-links"><a class="publication-link-btn" href="../publications/IMS_2026_Adap_final.pdf" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>PDF</a></div>
+  <div class="publication-image"><img src="../assets/pub/ims2026-range-adaptive-fmcw.png" alt="Range-Adaptive FMCW Radar: Real-Time Adaptation of RF and Baseband for Robust and Energy-Efficient Sensing"></div>
+  <div class="publication-section">
+    <h2>Abstract</h2>
+    <p>Static radar parameters fix the obtainable sensing range and force high RF power/gain, often wasting energy and requiring multiple modules to cover different ranges. We develop a closed-loop, range-aware adaptation framework that tunes RF front-end and ADC parameters on a per-frame basis from the detected range, thereby matching the detectable distance to the scene while dynamically scaling RF front-end performance. A lightweight adaptation pipeline refines detections, applies temporal smoothing, and maps the next-frame configuration using a pre-trained ML model under an energy-cost constraint. Implemented in closed loop on a commercial radar module, the approach reduces total energy by 33 to 69% without degrading detection performance. The end-to-end latency including signal processing and configuration upload, achieved a median of 21.76 ms, validating real-time operation.</p>
+  </div>
+  <div class="publication-section" id="bibtex">
+    <h2>BibTeX</h2>
+    <div class="bibtex-wrapper" title="Click to copy"><span class="copy-note">Copied!</span><pre>@INPROCEEDINGS{11624256,
+  author={Park, Jinhyeok and Mohammad, Mir Sayeed and Wang, Wei-Chun and Mukhopadhyay, Saibal},
+  booktitle={2026 IEEE MTT-S Radio Frequency Systems and Applications Symposium (IMS RFSA)},
+  title={Range-Adaptive FMCW Radar: Real-Time Adaptation of RF and Baseband for Robust and Energy-Efficient Sensing},
+  year={2026},
+  pages={219-222},
+  doi={10.1109/IMSRFSA70221.2026.11624256}}</pre></div>
+  </div>
+</div>
+<footer>ⓒ 2026 Jinhyeok Park</footer>
+<script>
+  document.querySelectorAll('.bibtex-wrapper').forEach(function (box) {
+    box.addEventListener('click', function () {
+      var text = box.querySelector('pre').innerText, note = box.querySelector('.copy-note');
+      var done = function () { note.classList.add('show'); setTimeout(function () { note.classList.remove('show'); }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {});
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parallel Kalman Filtering with Physics-Informed Selective State-Space Models for Robust Radar Sensing | Jinhyeok Park</title>
+  <meta name="description" content="Recasts Kalman filtering as a physics-informed selective SSM, staying robust to frame drops and running 2.5× faster than neural-network-assisted Kalman filters.">
+  <meta property="og:title" content="Parallel Kalman Filtering with Physics-Informed Selective State-Space Models for Robust Radar Sensing">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/pub/ims2026-parallel-kalman-ssm.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../faviconfiles/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../faviconfiles/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../faviconfiles/favicon-16x16.png">
+  <link rel="manifest" href="../faviconfiles/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="publication-page">
+  <a class="back-link" href="../index.html#publications"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  <h1 class="publication-title">Parallel Kalman Filtering with Physics-Informed Selective State-Space Models for Robust Radar Sensing</h1>
+  <div class="publication-authors"><span class="author-me">Jinhyeok Park, </span><span class="author">Apurba Prasad Padhy, </span><span class="author">Han Cho, </span><span class="author"><a href="https://ece.gatech.edu/directory/saibal-mukhopadhyay" target="_blank" rel="noreferrer">Saibal Mukhopadhyay</a></span></div>
+  <div class="publication-venue">IEEE MTT-S Radio Frequency Systems and Applications Symposium (IMS RFSA), 2026, pp. 63–66</div>
+  <div class="publication-links"><a class="publication-link-btn" href="../publications/IMS_2026_PKF.pdf" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>PDF</a></div>
+  <div class="publication-image"><img src="../assets/pub/ims2026-parallel-kalman-ssm.png" alt="Parallel Kalman Filtering with Physics-Informed Selective State-Space Models for Robust Radar Sensing"></div>
+  <div class="publication-section">
+    <h2>Abstract</h2>
+    <p>Classical Kalman filters struggle under nonlinear dynamics, while neural-network-assisted Kalman filters improve robustness but still rely on strict frame-by-frame updates. However, real-world radar sensing frequently violates this assumption due to synchronization errors, clutter, sensor dropouts, and hardware latency. To address these challenges, we propose a physics-informed long-sequence Kalman filtering framework that leverages state-space neural architectures to model extended temporal structure beyond the limits of frame-by-frame filtering. By incorporating known system and observation matrices, the model learns an adaptive Kalman gain with substantially reduced training requirements. Evaluated on the RADIATE dataset, the proposed method achieves 5.5 dB higher accuracy under clean conditions, delivers more than 9.5 dB improvement under frame-drop scenarios, and provides 2.5× faster sequence-level inference than neural-network-assisted Kalman filters.</p>
+  </div>
+  <div class="publication-section" id="bibtex">
+    <h2>BibTeX</h2>
+    <div class="bibtex-wrapper" title="Click to copy"><span class="copy-note">Copied!</span><pre>@INPROCEEDINGS{11624260,
+  author={Park, Jinhyeok and Padhy, Apurba Prasad and Cho, Han and Mukhopadhyay, Saibal},
+  booktitle={2026 IEEE MTT-S Radio Frequency Systems and Applications Symposium (IMS RFSA)},
+  title={Parallel Kalman Filtering with Physics-Informed Selective State-Space Models for Robust Radar Sensing},
+  year={2026},
+  pages={63-66},
+  doi={10.1109/IMSRFSA70221.2026.11624260}}</pre></div>
+  </div>
+</div>
+<footer>ⓒ 2026 Jinhyeok Park</footer>
+<script>
+  document.querySelectorAll('.bibtex-wrapper').forEach(function (box) {
+    box.addEventListener('click', function () {
+      var text = box.querySelector('pre').innerText, note = box.querySelector('.copy-note');
+      var done = function () { note.classList.add('show'); setTimeout(function () { note.classList.remove('show'); }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {});
+    });
+  });
+</script>
+</body>
+</html>

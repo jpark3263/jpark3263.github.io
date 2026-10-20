@@ -17,154 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #ffffff;
-      --ink: rgba(0,0,0,.85);
-      --ink-2: rgba(0,0,0,.6);
-      --muted: rgba(0,0,0,.4);
-      --line: rgba(0,0,0,.1);
-      --chip: rgba(0,0,0,.02);
-      --chip-hover: rgba(0,0,0,.06);
-      --award-bg: #fff9e6;
-      --award-ink: #c80;
-      --review-bg: #eef4fb;
-      --review-ink: #2f5f8f;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-    html { font-size: 16.2px; }
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      word-break: keep-all;
-    }
-    a { color: inherit; text-decoration: none; }
-    strong { font-weight: 600; }
-
-    .contents {
-      max-width: calc(770px + 2 * 38px);
-      margin: 0 auto;
-      padding: 3rem 38px 0;
-      display: flex; flex-direction: column; gap: 3rem;
-    }
-    .section { line-height: 1.6; }
-    .section .title {
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 1rem;
-      font-size: 1.4rem; font-weight: 500;
-    }
-
-    /* ---------- header ---------- */
-    .top { position: relative; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
-    .logo { display: flex; align-items: center; }
-    .round {
-      flex-shrink: 0; width: 120px; height: 120px; margin-right: 20px;
-      border-radius: 100%; overflow: hidden;
-    }
-    .round img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .logo h1 {
-      font-family: "Inter Tight", system-ui, sans-serif;
-      font-weight: 700; line-height: 1; font-size: 2.5rem; letter-spacing: -.06rem;
-    }
-    .logo h3 { font-weight: 400; line-height: 1.2; color: var(--muted); margin-top: .35rem; font-size: 1.17rem; }
-    .social { display: flex; align-items: center; gap: .6rem; position: absolute; top: 44px; right: 0; }
-    .social a {
-      display: flex; justify-content: center; align-items: center;
-      width: 2rem; height: 2rem; border-radius: 50%;
-      color: var(--muted); background: var(--chip);
-      transition: background-color .15s ease, color .15s ease;
-    }
-    .social a:hover { color: var(--ink); background: var(--chip-hover); }
-    .social a:active { transform: scale(.92); }
-    .social .cv-icon { font-size: .75rem; font-weight: 700; letter-spacing: -.02em; }
-    .social i { font-size: 1rem; }
-
-    /* ---------- intro ---------- */
-    .info { padding: 1rem 1rem 0; }
-    .info p + p { margin-top: 1rem; }
-    .info a, .news-item a, .row a {
-      text-decoration: underline; text-decoration-color: var(--muted); transition: color .2s ease;
-    }
-    .info a:hover, .news-item a:hover, .row a:hover { color: var(--ink-2); }
-
-    /* ---------- news / dated rows ---------- */
-    .news-list { display: flex; flex-direction: column; gap: 1rem; line-height: 1.3; }
-    .news-item, .row { display: flex; align-items: start; }
-    .news-item .date, .row .date {
-      margin-top: 2px; width: 6rem; flex-shrink: 0; white-space: nowrap;
-      font-size: .8rem; color: var(--muted);
-    }
-    .news-item .text, .row .text { flex: 1 0 0; }
-    .row .text .sub { display: block; font-size: .9rem; color: var(--ink-2); margin-top: .15rem; }
-    .row .date { width: 8.5rem; }
-    .is-hidden { display: none !important; }
-
-    .more-btn {
-      font-size: .9rem; cursor: pointer; text-align: center; color: var(--muted);
-      background: none; border: 0; font-family: inherit; padding: .25rem; width: 100%;
-    }
-    .more-btn:hover { color: var(--ink); }
-
-    /* ---------- publications ---------- */
-    .pub-list { display: flex; flex-direction: column; gap: 3rem; }
-    .pub-main { display: flex; gap: 2rem; align-items: center; }
-    .thumb {
-      flex-shrink: 0; width: 15rem; aspect-ratio: 2/1; overflow: hidden;
-      display: flex; align-items: center; justify-content: center; position: relative;
-      color: rgba(255,255,255,.92); border-radius: 2px;
-    }
-    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .thumb .glyph { font-size: 1.7rem; opacity: .9; }
-    .thumb .tag {
-      position: absolute; left: .7rem; bottom: .55rem;
-      font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; opacity: .8;
-    }
-    .t-radar   { background: linear-gradient(135deg, #0f2a44 0%, #1f5c7a 100%); }
-    .t-ssm     { background: linear-gradient(135deg, #2c1f4a 0%, #5a3f8c 100%); }
-    .t-coop    { background: linear-gradient(135deg, #123a2e 0%, #2e7a5c 100%); }
-    .t-rf      { background: linear-gradient(135deg, #4a2a12 0%, #a0622c 100%); }
-    .thumb::after {
-      content: ""; position: absolute; inset: 0;
-      background: repeating-radial-gradient(circle at 85% 120%, rgba(255,255,255,.07) 0 1px, transparent 1px 14px);
-    }
-
-    .pub-info { display: flex; flex-direction: column; }
-    .pub-meta { font-size: .85rem; line-height: 1.6rem; margin-bottom: .15rem; display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
-    .pub-venue {
-      white-space: nowrap; border: 1px solid var(--line); line-height: 1;
-      padding: .2rem .3rem; border-radius: .25rem; color: var(--ink-2);
-    }
-    .badge { line-height: 1; padding: .2rem .5rem; border-radius: .25rem; font-weight: 500; }
-    .badge.award  { background: var(--award-bg); color: var(--award-ink); }
-    .badge.review { background: var(--review-bg); color: var(--review-ink); }
-    .pub-title { font-weight: 600; }
-    .pub-authors { font-size: .85rem; color: var(--ink-2); margin-top: .1rem; }
-    .pub-authors b { color: var(--ink); font-weight: 600; }
-    .pub-desc { font-size: .95rem; line-height: 1.35; margin-top: .3rem; }
-    .links { margin-top: .6rem; display: flex; flex-wrap: wrap; gap: .75rem; }
-    .links a { display: inline-flex; align-items: center; gap: .2rem; font-size: .85rem; }
-    .links a:hover { color: var(--ink-2); }
-    .links i { color: var(--muted); font-size: .7rem; }
-
-    footer { display: flex; justify-content: center; padding: 6rem 0 3rem; font-size: .8em; color: var(--muted); }
-
-    @media (max-width: 700px) {
-      .contents { padding: 1.5rem 16px 0; gap: 2.5rem; }
-      .top { display: block; }
-      .social { position: static; margin-top: .9rem; justify-content: flex-start; }
-      .round { width: 92px; height: 92px; margin-right: 16px; }
-      .logo h1 { font-size: 2rem; }
-      .logo h3 { font-size: .9rem; }
-      .info { padding: .5rem 0 0; }
-      .pub-main { flex-direction: column; align-items: flex-start; gap: 1rem; }
-      .thumb { width: 100%; }
-      .news-item, .row { display: block; }
-      .news-item .date, .row .date { width: auto; margin-bottom: .1rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <div class="contents">
@@ -209,7 +62,7 @@
       <div class="news-item"><div class="date">Oct. 2026</div><div class="text">Received the Georgia Tech Cirronet Fellowship!</div></div>
       <div class="news-item"><div class="date">Oct. 2026</div><div class="text"><a href="#publications">Anytime NLOS Radar Imaging</a> has been accepted to WACV 2027!</div></div>
       <div class="news-item"><div class="date">Jul. 2026</div><div class="text">Our proposal <em>AI Workload Monitoring with Electromagnetic Emission Sensor</em> was funded by Longview Philanthropy. Excited to start working on EM side-channel monitoring of AI workloads on GPUs!</div></div>
-      <div class="news-item"><div class="date">Jun. 2026</div><div class="text">Presented two papers at IMS 2026: range-adaptive FMCW radar and parallel Kalman filtering with selective SSMs.</div></div>
+      <div class="news-item"><div class="date">Jun. 2026</div><div class="text">Presented two papers at IMS RFSA 2026 (IEEE MTT-S Radio Frequency Systems and Applications Symposium): range-adaptive FMCW radar and parallel Kalman filtering with selective SSMs.</div></div>
       <div class="news-item"><div class="date">Oct. 2025</div><div class="text">Won the Best Poster Award at the SRC CogniSense Annual Review. 🏆</div></div>
       <div class="news-item"><div class="date">Aug. 2024</div><div class="text">Started my Ph.D. at Georgia Tech with the ECE Fellowship.</div></div>
       <div class="news-item"><div class="date">Mar. 2023</div><div class="text">Joined Samsung Electronics as an RF engineer.</div></div>
@@ -222,75 +75,62 @@
     <div class="pub-list" data-collapsible="6">
 
       <div class="pub-item"><div class="pub-main">
-        <div class="thumb t-radar"><span class="glyph"><i class="fas fa-eye-slash"></i></span><span class="tag">NLOS imaging</span></div>
+        <a class="thumb" href="pub/wacv2027-anytime-nlos.html"><img src="assets/pub/wacv2027-anytime-nlos.png" alt="Anytime Non-Line-of-Sight Radar Imaging with Complex-Valued Selective State-Space Models" loading="lazy"></a>
         <div class="pub-info">
           <div class="pub-meta"><span class="pub-venue">WACV'27</span></div>
-          <div class="pub-title">Anytime NLOS Radar Imaging with Complex-Valued Selective State-Space Models</div>
-          <div class="pub-authors"><b>J. Park</b> et al.</div>
+          <a class="pub-title-link" href="pub/wacv2027-anytime-nlos.html"><div class="pub-title">Anytime Non-Line-of-Sight Radar Imaging with Complex-Valued Selective State-Space Models</div></a>
           <div class="pub-desc">A complex-valued selective SSM that reconstructs hidden objects from streaming mmWave apertures, reaching usable quality from a small fraction of the scan that backprojection needs.</div>
+          <div class="links"><a href="pub/wacv2027-anytime-nlos.html"><i class="fas fa-house"></i>Project</a><a href="pub/wacv2027-anytime-nlos.html#bibtex"><i class="fas fa-quote-right"></i>BibTeX</a></div>
         </div>
       </div></div>
 
       <div class="pub-item"><div class="pub-main">
-        <div class="thumb t-radar"><span class="glyph"><i class="fas fa-satellite-dish"></i></span><span class="tag">Adaptive radar</span></div>
+        <a class="thumb" href="pub/ims2026-range-adaptive-fmcw.html"><img src="assets/pub/ims2026-range-adaptive-fmcw.png" alt="Range-Adaptive FMCW Radar: Real-Time Adaptation of RF and Baseband for Robust and Energy-Efficient Sensing" loading="lazy"></a>
         <div class="pub-info">
-          <div class="pub-meta"><span class="pub-venue">IMS'26</span></div>
-          <div class="pub-title">Range-Adaptive FMCW Radar: Real-Time Adaptation of RF and Baseband for Robust and Energy-Efficient Sensing</div>
-          <div class="pub-authors"><b>J. Park</b> et al.</div>
-          <div class="pub-desc">Closed-loop, real-time reconfiguration of the RF front-end and baseband on TI mmWave hardware to cut sensing energy without losing robustness.</div>
+          <div class="pub-meta"><span class="pub-venue">IMS RFSA'26</span></div>
+          <a class="pub-title-link" href="pub/ims2026-range-adaptive-fmcw.html"><div class="pub-title">Range-Adaptive FMCW Radar: Real-Time Adaptation of RF and Baseband for Robust and Energy-Efficient Sensing</div></a>
+          <div class="pub-desc">Closed-loop, per-frame reconfiguration of the RF front-end and ADC on a commercial radar module, cutting total energy by 33–69% at a 21.76 ms median latency.</div>
+          <div class="links"><a href="pub/ims2026-range-adaptive-fmcw.html"><i class="fas fa-house"></i>Project</a><a class="" href="../publications/IMS_2026_Adap_final.pdf" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>PDF</a><a href="pub/ims2026-range-adaptive-fmcw.html#bibtex"><i class="fas fa-quote-right"></i>BibTeX</a></div>
         </div>
       </div></div>
 
       <div class="pub-item"><div class="pub-main">
-        <div class="thumb t-ssm"><span class="glyph"><i class="fas fa-wave-square"></i></span><span class="tag">SSM · Kalman</span></div>
+        <a class="thumb" href="pub/ims2026-parallel-kalman-ssm.html"><img src="assets/pub/ims2026-parallel-kalman-ssm.png" alt="Parallel Kalman Filtering with Physics-Informed Selective State-Space Models for Robust Radar Sensing" loading="lazy"></a>
         <div class="pub-info">
-          <div class="pub-meta"><span class="pub-venue">IMS'26</span></div>
-          <div class="pub-title">Parallel Kalman Filtering with Physics-Informed Selective State-Space Models for Robust Radar Sensing</div>
-          <div class="pub-authors"><b>J. Park</b> et al.</div>
-          <div class="pub-desc">Recasts Kalman filtering as a physics-informed selective SSM, so radar tracking can run as a parallel scan while staying robust to noise.</div>
+          <div class="pub-meta"><span class="pub-venue">IMS RFSA'26</span></div>
+          <a class="pub-title-link" href="pub/ims2026-parallel-kalman-ssm.html"><div class="pub-title">Parallel Kalman Filtering with Physics-Informed Selective State-Space Models for Robust Radar Sensing</div></a>
+          <div class="pub-desc">Recasts Kalman filtering as a physics-informed selective SSM, staying robust to frame drops and running 2.5× faster than neural-network-assisted Kalman filters.</div>
+          <div class="links"><a href="pub/ims2026-parallel-kalman-ssm.html"><i class="fas fa-house"></i>Project</a><a class="" href="../publications/IMS_2026_PKF.pdf" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>PDF</a><a href="pub/ims2026-parallel-kalman-ssm.html#bibtex"><i class="fas fa-quote-right"></i>BibTeX</a></div>
         </div>
       </div></div>
 
       <div class="pub-item"><div class="pub-main">
-        <div class="thumb t-radar"><span class="glyph"><i class="fas fa-sliders"></i></span><span class="tag">Adaptive radar</span></div>
+        <a class="thumb" href="pub/sensors2025-frontend-adaptation.html"><img src="assets/pub/sensors2025-frontend-adaptation.png" alt="Real-Time Front-End Adaptation for Energy-Efficient mmWave Radar Sensor" loading="lazy"></a>
         <div class="pub-info">
           <div class="pub-meta"><span class="pub-venue">SENSORS'25</span></div>
-          <div class="pub-title">LUGA: Lightweight Uncertainty-Guided Sensing Resolution Adaptation for Energy Efficient Radar Processing</div>
-          <div class="pub-authors">S. Sharma, <b>J. Park</b>, H. Kumawat, S. Mukhopadhyay</div>
-          <div class="pub-desc">Uses model uncertainty to choose radar sensing resolution on the fly, trading little accuracy for large energy savings.</div>
+          <a class="pub-title-link" href="pub/sensors2025-frontend-adaptation.html"><div class="pub-title">Real-Time Front-End Adaptation for Energy-Efficient mmWave Radar Sensor</div></a>
+          <div class="pub-desc">A lightweight feedback loop that reconfigures an AWR1843 radar front-end frame by frame with a pre-trained ML model, improving energy efficiency 2.7× within real-time latency limits.</div>
+          <div class="links"><a href="pub/sensors2025-frontend-adaptation.html"><i class="fas fa-house"></i>Project</a><a class="" href="../publications/Real-Time%20Front-End%20Adaptation%20for%20Energy-Efficient%20mmWaver%20Radar%20Sensor.pdf" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>PDF</a><a href="pub/sensors2025-frontend-adaptation.html#bibtex"><i class="fas fa-quote-right"></i>BibTeX</a></div>
         </div>
       </div></div>
 
       <div class="pub-item"><div class="pub-main">
-        <div class="thumb t-radar"><span class="glyph"><i class="fas fa-microchip"></i></span><span class="tag">Hardware</span></div>
+        <a class="thumb" href="pub/sensors2025-luga.html"><img src="assets/pub/sensors2025-luga.png" alt="LUGA: Lightweight Uncertainty-Guided Sensing Resolution Adaptation for Energy Efficient Radar Processing" loading="lazy"></a>
         <div class="pub-info">
-          <div class="pub-meta"><span class="pub-venue">IMS'25</span></div>
-          <div class="pub-title">AdaAFE-CIM: A Hardware Implementation of Subspace Tracking for Adaptive Radar Data Compression</div>
-          <div class="pub-authors">A. Saad-Falcon, W.-C. Wang, L. Shamieh, <b>J. Park</b>, X. Mao, S. Mukhopadhyay, J. Romberg</div>
-          <div class="pub-desc">Compute-in-memory hardware for subspace tracking that compresses radar data adaptively at the front end.</div>
-          <div class="links"><a href="https://ieeexplore.ieee.org/abstract/document/11103977" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>IEEE</a></div>
+          <div class="pub-meta"><span class="pub-venue">SENSORS'25</span></div>
+          <a class="pub-title-link" href="pub/sensors2025-luga.html"><div class="pub-title">LUGA: Lightweight Uncertainty-Guided Sensing Resolution Adaptation for Energy Efficient Radar Processing</div></a>
+          <div class="pub-desc">Uses detector uncertainty to switch radar sensing resolution on the fly, cutting the total energy budget by 41% while keeping accuracy competitive.</div>
+          <div class="links"><a href="pub/sensors2025-luga.html"><i class="fas fa-house"></i>Project</a><a class="" href="https://doi.org/10.1109/SENSORS59705.2025.11330285" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>IEEE</a><a href="pub/sensors2025-luga.html#bibtex"><i class="fas fa-quote-right"></i>BibTeX</a></div>
         </div>
       </div></div>
 
       <div class="pub-item"><div class="pub-main">
-        <div class="thumb t-rf"><span class="glyph"><i class="fas fa-tower-broadcast"></i></span><span class="tag">mmWave IC</span></div>
+        <a class="thumb" href="pub/mwtl2023-bidirectional-vga.html"><img src="assets/pub/mwtl2023-bidirectional-vga.png" alt="Wideband Bidirectional Variable Gain Amplifier for 5G Communication" loading="lazy"></a>
         <div class="pub-info">
           <div class="pub-meta"><span class="pub-venue">MWTL'23</span></div>
-          <div class="pub-title">Wideband Bidirectional Variable Gain Amplifier for 5G Communication</div>
-          <div class="pub-authors"><b>J. Park</b>, S. Hong</div>
-          <div class="pub-desc">A 23–35&nbsp;GHz wideband bidirectional VGA for 5G beamforming ICs.</div>
-          <div class="links"><a href="https://ieeexplore.ieee.org/document/10050184" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>IEEE</a></div>
-        </div>
-      </div></div>
-
-      <div class="pub-item"><div class="pub-main">
-        <div class="thumb t-rf"><span class="glyph"><i class="fas fa-bolt"></i></span><span class="tag">mmWave IC</span></div>
-        <div class="pub-info">
-          <div class="pub-meta"><span class="pub-venue">GSMM'22</span><span class="badge award">🥇 Best Paper Finalist</span></div>
-          <div class="pub-title">A 24–30 GHz Wideband Power Amplifier With High-Coupling-Coefficient Transmission Line Transformer and Staggered Tuning</div>
-          <div class="pub-authors">G. Lee, J. Lee, <b>J. Park</b>, S. Hong</div>
-          <div class="pub-desc">A wideband mmWave power amplifier for 5G using a high-coupling transmission-line transformer.</div>
-          <div class="links"><a href="https://ieeexplore.ieee.org/document/9792329" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>IEEE</a></div>
+          <a class="pub-title-link" href="pub/mwtl2023-bidirectional-vga.html"><div class="pub-title">Wideband Bidirectional Variable Gain Amplifier for 5G Communication</div></a>
+          <div class="pub-desc">A 28-nm CMOS bidirectional VGA covering 22–36 GHz for 5G beamforming ICs, with a 15 dB gain-control range and under 3.3° rms phase error.</div>
+          <div class="links"><a href="pub/mwtl2023-bidirectional-vga.html"><i class="fas fa-house"></i>Project</a><a class="" href="https://doi.org/10.1109/LMWT.2023.3244715" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>IEEE</a><a href="pub/mwtl2023-bidirectional-vga.html#bibtex"><i class="fas fa-quote-right"></i>BibTeX</a></div>
         </div>
       </div></div>
 
@@ -316,7 +156,6 @@
       <div class="row"><div class="date">Oct. 2025</div><div class="text">Best Poster Award, SRC CogniSense Annual Review</div></div>
       <div class="row"><div class="date">2024 – 2025</div><div class="text">Georgia Tech ECE Fellowship</div></div>
       <div class="row"><div class="date">2021 – 2023</div><div class="text">Samsung Semiconductor Scholarship</div></div>
-      <div class="row"><div class="date">2022</div><div class="text">Best Paper Award Finalist, GSMM</div></div>
     </div>
   </div>
 

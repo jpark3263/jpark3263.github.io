@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wideband Bidirectional Variable Gain Amplifier for 5G Communication | Jinhyeok Park</title>
+  <meta name="description" content="A 28-nm CMOS bidirectional VGA covering 22–36 GHz for 5G beamforming ICs, with a 15 dB gain-control range and under 3.3° rms phase error.">
+  <meta property="og:title" content="Wideband Bidirectional Variable Gain Amplifier for 5G Communication">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/pub/mwtl2023-bidirectional-vga.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../faviconfiles/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../faviconfiles/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../faviconfiles/favicon-16x16.png">
+  <link rel="manifest" href="../faviconfiles/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="publication-page">
+  <a class="back-link" href="../index.html#publications"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  <h1 class="publication-title">Wideband Bidirectional Variable Gain Amplifier for 5G Communication</h1>
+  <div class="publication-authors"><span class="author-me">Jinhyeok Park, </span><span class="author">Songcheol Hong</span></div>
+  <div class="publication-venue">IEEE Microwave and Wireless Technology Letters, vol. 33, no. 6, pp. 691–694, 2023</div>
+  <div class="publication-links"><a class="publication-link-btn" href="https://doi.org/10.1109/LMWT.2023.3244715" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>IEEE</a></div>
+  <div class="publication-image"><img src="../assets/pub/mwtl2023-bidirectional-vga.png" alt="Wideband Bidirectional Variable Gain Amplifier for 5G Communication"></div>
+  <div class="publication-section">
+    <h2>Abstract</h2>
+    <p>A wideband bidirectional variable gain amplifier (BDVGA) for 5G communication implemented in a 28-nm CMOS process is proposed. It consists of a symmetrical pair of differential main and auxiliary amplifiers, in which the auxiliary amplifiers are cross-connected to have a gain-control function. Their transistor sizes are carefully optimized for the gain, power consumption, and gain-control dynamic range. Capacitance (C<sub>ex</sub>) is introduced at the gate-to-drain nodes of auxiliary transistors to eliminate any phase variation when controlling the gain. The n257, n258, and n261 bands are suitably covered by using the same transmission line transformers (TLTs) at the input and output. The amplifier shows the maximum gains of 5.4 and 6.1 dB for TX and RX, respectively, with a gain-control range of 15 dB and core size of 0.12 mm². Also measured are 3-dB bandwidths of 22.3–35.8 GHz (46.4%) and 22.8–35 GHz (42.2%) with corresponding root-mean-square (rms) phase errors of &lt;2.8°/3.3° and maximum dc power consumption of 23 mW.</p>
+  </div>
+  <div class="publication-section" id="bibtex">
+    <h2>BibTeX</h2>
+    <div class="bibtex-wrapper" title="Click to copy"><span class="copy-note">Copied!</span><pre>@article{park2023wideband,
+  title   = {{Wideband Bidirectional Variable Gain Amplifier for 5G Communication}},
+  author  = {Jinhyeok Park and Songcheol Hong},
+  journal = {IEEE Microwave and Wireless Technology Letters},
+  volume  = {33},
+  number  = {6},
+  pages   = {691--694},
+  year    = {2023},
+  doi     = {10.1109/LMWT.2023.3244715}
+}</pre></div>
+  </div>
+</div>
+<footer>ⓒ 2026 Jinhyeok Park</footer>
+<script>
+  document.querySelectorAll('.bibtex-wrapper').forEach(function (box) {
+    box.addEventListener('click', function () {
+      var text = box.querySelector('pre').innerText, note = box.querySelector('.copy-note');
+      var done = function () { note.classList.add('show'); setTimeout(function () { note.classList.remove('show'); }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {});
+    });
+  });
+</script>
+</body>
+</html>

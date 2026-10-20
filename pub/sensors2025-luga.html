@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUGA: Lightweight Uncertainty-Guided Sensing Resolution Adaptation for Energy Efficient Radar Processing | Jinhyeok Park</title>
+  <meta name="description" content="Uses detector uncertainty to switch radar sensing resolution on the fly, cutting the total energy budget by 41% while keeping accuracy competitive.">
+  <meta property="og:title" content="LUGA: Lightweight Uncertainty-Guided Sensing Resolution Adaptation for Energy Efficient Radar Processing">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/pub/sensors2025-luga.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../faviconfiles/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../faviconfiles/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../faviconfiles/favicon-16x16.png">
+  <link rel="manifest" href="../faviconfiles/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="publication-page">
+  <a class="back-link" href="../index.html#publications"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  <h1 class="publication-title">LUGA: Lightweight Uncertainty-Guided Sensing Resolution Adaptation for Energy Efficient Radar Processing</h1>
+  <div class="publication-authors"><span class="author">Sudarshan Sharma, </span><span class="author-me">Jinhyeok Park, </span><span class="author">Hemant Kumawat, </span><span class="author"><a href="https://ece.gatech.edu/directory/saibal-mukhopadhyay" target="_blank" rel="noreferrer">Saibal Mukhopadhyay</a></span></div>
+  <div class="publication-venue">IEEE SENSORS, 2025</div>
+  <div class="publication-links"><a class="publication-link-btn" href="https://doi.org/10.1109/SENSORS59705.2025.11330285" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>IEEE</a></div>
+  <div class="publication-image"><img src="../assets/pub/sensors2025-luga.png" alt="LUGA: Lightweight Uncertainty-Guided Sensing Resolution Adaptation for Energy Efficient Radar Processing"></div>
+  <div class="publication-section">
+    <h2>Abstract</h2>
+    <p>Static Frequency Modulated Continuous Wave (FMCW) radar sensing treats all scenes uniformly, resulting in inefficient resource usage given that naturally occurring scenes vary in complexity. Prior adaptive schemes depend on compute heavy online learning methods, leading to high compute cost and latency, which limits edge deployment. Instead, we pair the uncertainty of a learned detector with a lightweight hysteretic policy that adjusts the chirp and virtual antenna counts on the fly, creating an adaptive perception-sensing feedback loop. Evaluated on a public object detection dataset, our approach reduces the inference compute energy by 63% and, when mapped onto a representative TI IWR1443 radar front-end, simulation under the adaptive schedule projects a 23% reduction in sensing energy. This yields an overall 41% reduction in the total energy budget while maintaining competitive accuracy, allowing high-resolution sensing on demand while conserving resources in simpler scenes.</p>
+  </div>
+  <div class="publication-section" id="bibtex">
+    <h2>BibTeX</h2>
+    <div class="bibtex-wrapper" title="Click to copy"><span class="copy-note">Copied!</span><pre>@INPROCEEDINGS{11330285,
+  author={Sharma, Sudarshan and Park, Jinhyeok and Kumawat, Hemant and Mukhopadhyay, Saibal},
+  booktitle={2025 IEEE SENSORS},
+  title={LUGA: Lightweight Uncertainty-Guided Sensing Resolution Adaptation for Energy Efficient Radar Processing},
+  year={2025},
+  pages={1-4},
+  doi={10.1109/SENSORS59705.2025.11330285}}</pre></div>
+  </div>
+</div>
+<footer>ⓒ 2026 Jinhyeok Park</footer>
+<script>
+  document.querySelectorAll('.bibtex-wrapper').forEach(function (box) {
+    box.addEventListener('click', function () {
+      var text = box.querySelector('pre').innerText, note = box.querySelector('.copy-note');
+      var done = function () { note.classList.add('show'); setTimeout(function () { note.classList.remove('show'); }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {});
+    });
+  });
+</script>
+</body>
+</html>
