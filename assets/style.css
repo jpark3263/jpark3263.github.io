@@ -99,6 +99,8 @@ strong { font-weight: 600; }
 }
 .thumb:hover { opacity: .75; }
 .thumb img { width: 100%; height: 100%; object-fit: contain; display: block; padding: .35rem; }
+.thumb video { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
+.projects .pub-list, .pub-list.projects { gap: 2.5rem; }
 
 .pub-info { display: flex; flex-direction: column; }
 .pub-meta { font-size: .85rem; line-height: 1.6rem; margin-bottom: .15rem; display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
