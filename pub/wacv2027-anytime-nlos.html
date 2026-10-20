@@ -29,25 +29,7 @@
     <h2>Abstract</h2>
     <p>Radar penetrates optically opaque materials, making it attractive for through-obstruction perception in time-critical settings. But radar resolution scales with aperture, so high-resolution reconstruction is slow, needing a large accumulated aperture or minutes of offline optimization. We argue that what time-critical settings need is a usable reconstruction first, from as few frames and as low latency as possible. Therefore, we recast non-line-of-sight radar imaging as a streaming, anytime task by leveraging a state-space model (SSM) that processes per-frame measurements sequentially and emits a surface estimate as data arrives. The SSM architecture gives agility: our model saturates its own quality from 2% of the aperture at millisecond processing latency, an end-to-end time under a minute against tens of minutes for the offline state of the art. A complex-valued transition A = −exp(a) + jω gives fidelity. On 44 real occluded objects, we reach quality competitive with the offline state of the art (0.70 vs. 0.73 F-score) at over an order of magnitude lower end-to-end time.</p>
   </div>
-  <div class="publication-section" id="bibtex">
-    <h2>BibTeX</h2>
-    <div class="bibtex-wrapper" title="Click to copy"><span class="copy-note">Copied!</span><pre>@inproceedings{park2027anytime,
-  title     = {{Anytime Non-Line-of-Sight Radar Imaging with Complex-Valued Selective State-Space Models}},
-  author    = {Jinhyeok Park and Han Cho and Apurba Prasad Padhy and Saibal Mukhopadhyay},
-  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-  year      = {2027}
-}</pre></div>
-  </div>
 </div>
 <footer>ⓒ 2026 Jinhyeok Park</footer>
-<script>
-  document.querySelectorAll('.bibtex-wrapper').forEach(function (box) {
-    box.addEventListener('click', function () {
-      var text = box.querySelector('pre').innerText, note = box.querySelector('.copy-note');
-      var done = function () { note.classList.add('show'); setTimeout(function () { note.classList.remove('show'); }, 1500); };
-      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {});
-    });
-  });
-</script>
 </body>
 </html>
